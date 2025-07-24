@@ -13,7 +13,7 @@ b=" is"
 c=" awesome"
 print(a+b+c)
 
-#Memory addresss
+#Memory address
 a=20
 b=20
 print(id(a))
