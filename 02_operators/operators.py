@@ -62,7 +62,7 @@ h=10
 print(g is h)
 print(g is not h)
 
-#Bitwise Operators
+#Bitwise Operatorss
 #AND(&), OR(|), XOR(^), Left Shift(<<), Right Shift(>>)
 i=5
 j=7
