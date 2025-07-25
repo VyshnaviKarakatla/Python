@@ -38,7 +38,11 @@ else:
     print("Student grade level is not between 1,12")
 
 #Additional Discount
-Grade=int(input("Enter the grade level again:"))
+print("Options:")
+print("Select 1 if student is in grade 10")
+print("Select 2 if student is in grade 12")
+print("Select 3 or 4 for any other grades")
+Grade=int(input("Enter option 1-4"))
 match Grade:
     case 1:
         if Student_grade_level==10:
@@ -47,13 +51,16 @@ match Grade:
         if Student_grade_level==12:
             print("Additioanl disocunt:5%")
     case 3:
-        if not Student_grade_level==12:
+        if Student_grade_level!=10:
             print("No additional discount")
     case 4:
-        if not Student_grade_level==10:
+        if Student_grade_level!=12:
             print("No additional discount")
+    case _:
+        print("Invalid Optiion")
 
 
+print("Student Summary")
 print(f"Student Name: {Student_name}")
 print(f"Student Grade Level: {Student_grade_level}")
 print(f"Academic Topper: {Student_academic_score}")
