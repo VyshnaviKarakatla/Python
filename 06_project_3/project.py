@@ -66,6 +66,3 @@ print(f"Student Grade Level: {Student_grade_level}")
 print(f"Academic Topper: {Student_academic_score}")
 print(f"Base Tution fee:{Student_base_tution_fee}")
 print(f"Student Discount: {Student_discount}")
-
-
-
