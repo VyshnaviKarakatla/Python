@@ -103,3 +103,49 @@ else:
 finally:
     print("Program Completed")
 print('-'*25)
+
+#userdefined error-single error
+class AgeTooYoungerError(Exception):
+    pass
+age=int(input("Enter age: "))
+if age<18:
+    raise AgeTooYoungerError("You must have 18+ to register")
+else:
+    print("Registration Successful")
+
+#userdefined error-multiple error
+class AgeTooYoungerError(Exception):
+    pass
+class NoIDError:
+    pass
+age=int(input("Enter age: "))
+if age<18:
+    raise AgeTooYoungerError("You must have 18+ to register")
+else:
+    has_id=input("Do you have ID? (yes/no)")
+    if has_id!='yes':
+        raise NoIDError("You must have ID")
+    
+#userdefined error-handling with try,except,else,finally
+class AgeTooYoungerError(Exception):
+    pass
+class NoIDError(Exception):
+    pass
+age=int(input("Enter age: "))
+try:
+    if age<18:
+        raise AgeTooYoungerError
+    else:
+        has_id=input("Do you have ID? (yes/no): ")
+        if has_id=='no':
+            raise NoIDError
+        else:
+            pass
+except AgeTooYoungerError:
+    print("You must have 18+ to register")
+except NoIDError:
+    print("You must have ID")
+else:
+    print("Registration Success")
+finally:
+    print("Thank you!!!")
